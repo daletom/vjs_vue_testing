@@ -10,6 +10,7 @@
     "@headlessui/vue": "^1.6.5",
     "@heroicons/vue": "^1.0.6",
     "@imgix/ix-video": "^1.0.4",
+    "media-chrome": "^0.8.1",
     "tw-elements": "^1.0.0-alpha12",
     "videojs-contrib-ads": "^6.9.0",
     "videojs-ima": "^2.0.1",

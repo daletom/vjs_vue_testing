@@ -10,6 +10,7 @@
   import VideoCarousel from './components/VideoCarousel.vue';
   import VideoPlyr from './components/VideoPlyr.vue';
   import VideoPlyrVue from './components/VideoPlyr.vue';
+import MediaThemeNetflix from './components/MediaThemeNetflix.vue';
 
 </script>
 <script>
@@ -151,6 +152,75 @@ export default {
             </div>
           </div>
         </section>
+        <section aria-labelledby="collections-heading" class="min-h-screen px-4 py-12 bg-gray-400 sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8">
+          <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:py-32 lg:max-w-none">
+            <h2 id="collections-heading" class="text-2xl font-extrabold text-center text-white">This is using Media Chrome Player with MP4</h2>
+              <div class="mt-6 space-y-12">
+                <div>
+                  <div class="relative w-full overflow-hidden bg-white border-2">
+                    <media-controller id="myController">
+                      <video
+                        slot="media"
+                        src="https://stream.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/high.mp4"
+                      >
+                      </video>
+                    </media-controller>
+                    <media-controller-bar>
+                      <media-play-button media-controller="myController"></media-play-button>
+                      <media-time-range></media-time-range>
+                      <media-mute-button></media-mute-button>
+                      <media-volume-range></media-volume-range>
+                      <media-fullscreen-button></media-fullscreen-button>
+                    </media-controller-bar>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-labelledby="collections-heading" class="min-h-screen px-4 py-12 bg-gray-400 sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8">
+          <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:py-32 lg:max-w-none">
+            <h2 id="collections-heading" class="text-2xl font-extrabold text-center text-white">Netflix Theme with MP4</h2>
+              <div class="mt-6 space-y-12">
+                <div>
+                  <div class="relative w-full overflow-hidden bg-white border-2">
+                    <MediaThemeNetflix>
+                    </MediaThemeNetflix>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-labelledby="collections-heading" class="min-h-screen px-4 py-12 bg-gray-400 sm:px-6 lg:px-8">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8">
+          <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:py-32 lg:max-w-none">
+            <h2 id="collections-heading" class="text-2xl font-extrabold text-center text-white">This is using Media Chrome Player with HLS.js</h2>
+              <div class="mt-6 space-y-12">
+                <div>
+                  <div class="relative w-full overflow-hidden bg-white border-2">
+                    <media-controller id="myController">
+                      <hls-video
+                        slot="media"
+                        src="https://stream.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe.m3u8"
+                      >
+                      </hls-video>
+                    </media-controller>
+                    <media-controller-bar>
+                      <media-play-button media-controller="myController"></media-play-button>
+                      <media-time-range></media-time-range>
+                      <media-mute-button></media-mute-button>
+                      <media-volume-range></media-volume-range>
+                      <media-fullscreen-button></media-fullscreen-button>
+                    </media-controller-bar>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section aria-labelledby="collections-heading" class="min-h-screen px-4 py-12 bg-gray-800 sm:px-6 lg:px-8">
         <div class="px-4 mx-auto sm:px-6 lg:px-8">
           <div class="max-w-2xl py-16 mx-auto sm:py-24 lg:py-32 lg:max-w-none">
@@ -190,4 +260,10 @@ export default {
   top: 40%;
   left: 45%;
 }
+
+hls-video {
+  width: 100%;
+  background-color: #000;
+}
+
 </style>
